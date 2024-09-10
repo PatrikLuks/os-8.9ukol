@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podivné zprávy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Podivné zprávy</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>author</th>
+                <th>ip</th>
+                <th>zprava</th>
+                <th>cas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% zpravy.forEach(function(zprava){ %>
+                <tr>
+                    <td><%= zprava.author %></td>
+                    <td><%= zprava.ip %></td>
+                    <td><%= zprava.messages %></td>
+                    <td><%= zprava.timestamp %></td>
+                </tr>
+                <% }) %>
+
+        </tbody>
+        <tfoot >
+            <tr>
+                <td colspan="4">pocet zprav: <%= zpravy.length %></td>
+            </tr>
+
+        </tfoot>
+
+    </table>
+
+</body>
+</html>
